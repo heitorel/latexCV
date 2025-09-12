@@ -40,8 +40,8 @@ Este projeto é baseado na classe **AltaCV**, criada e mantida pela comunidade:
 ### Passos
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/SEU_USUARIO/curriculo-latex.git
-   cd curriculo-latex
+   git clone https://github.com/SEU_USUARIO/altaCV.git
+   cd altaCV
    ```
 2. Compile o arquivo principal:
    ```bash
