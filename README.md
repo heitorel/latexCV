@@ -5,32 +5,6 @@ O design foi customizado com uma paleta em tons de **roxo escuro, lilás e verde
 
 ---
 
-## ℹ️ Sobre o template
-
-Este projeto é baseado na classe **AltaCV**, criada e mantida pela comunidade:
-
-%%%%%%%%%%%%%%%%%
-% This is an sample CV template created using altacv.cls
-% (v1.3, 10 May 2020) written by LianTze Lim (liantze@gmail.com). 
-% Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
-% (v1.7.1b, 11 Jan 2024) forked by Nicolás Omar González Passerino (nicolas.passerino@gmail.com)
-%
-%% It may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2003/12/01 or later.
-%%%%%%%%%%%%%%%%
-%% AltaCV uses the fontawesome5 and academicons fonts
-%% and packages.
-%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons 
-%% for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX 
-%% if you want to use academicons.
-
----
-
 ## 🚀 Como compilar
 
 ### Pré-requisitos
@@ -99,6 +73,32 @@ Troque o arquivo `linkedin-me.png` pela sua foto e ajuste o tamanho no comando:
 ## 📸 Exemplo (Preview)
 
 <img src="/sample.png" width="100%">
+
+---
+
+## ℹ️ Sobre o template
+
+Este projeto é baseado na classe **AltaCV**, criada e mantida pela comunidade:
+
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.3, 10 May 2020) written by LianTze Lim (liantze@gmail.com). 
+% Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% (v1.7.1b, 11 Jan 2024) forked by Nicolás Omar González Passerino (nicolas.passerino@gmail.com)
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+%% AltaCV uses the fontawesome5 and academicons fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons 
+%% for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX 
+%% if you want to use academicons.
 
 ---
 
