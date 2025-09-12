@@ -1,0 +1,185 @@
+
+
+%% options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+\newenvironment{sloppypar*}{\sloppy\ignorespaces}{\par}
+
+% Change the page layout
+\geometry{left=1.2cm,right=1.2cm,top=1cm,bottom=1cm,columnsep=0.75cm}
+
+\usepackage{paracol}
+
+\ifxetexorluatex
+  % If xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the color codes
+\ifdarkmode%
+  \definecolor{PrimaryColor}{HTML}{C69749}
+  \definecolor{SecondaryColor}{HTML}{D49B54}
+  \definecolor{ThirdColor}{HTML}{1877E8}
+  \definecolor{BodyColor}{HTML}{ABABAB}
+  \definecolor{EmphasisColor}{HTML}{ABABAB}
+  \definecolor{BackgroundColor}{HTML}{191919}
+\else%
+  \definecolor{PrimaryColor}{HTML}{160C3F}   % Roxo escuro
+  \definecolor{SecondaryColor}{HTML}{9C7CC2} % Lilás suave
+  \definecolor{ThirdColor}{HTML}{14B8A6}     % Verde-água / Teal
+  \definecolor{BodyColor}{HTML}{666666}      % Cinza médio
+  \definecolor{EmphasisColor}{HTML}{2E2E2E}  % Cinza quase preto
+  \definecolor{BackgroundColor}{HTML}{FFFFFF}% Bracno
+
+\fi%
+
+\colorlet{name}{PrimaryColor}
+\colorlet{tagline}{SecondaryColor}
+\colorlet{heading}{PrimaryColor}
+\colorlet{headingrule}{ThirdColor}
+\colorlet{subheading}{SecondaryColor}
+\colorlet{accent}{SecondaryColor}
+\colorlet{emphasis}{EmphasisColor}
+\colorlet{body}{BodyColor}
+\pagecolor{BackgroundColor}
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\small\bfseries}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\let\oldquote\quote
+\let\endoldquote\endquote
+\renewenvironment{quote}{\oldquote\color{body}}{\endoldquote}
+
+\begin{document}
+    \name{Heitor Lopes Bianchi}
+    \tagline{Engenheiro de software}
+    %% You can add multiple photos on the left or right
+    \photoL{4cm}{linkedin-me}
+
+    \personalinfo{
+        \email{heitor.lopes.bianchi@gmail.com}\smallskip
+        \phone{+55-11-977731896}\\
+        \location{São Paulo, Brasil}
+        \linkedin{heitorbianchi}
+        \github{heitorel}
+    }
+    
+    \makecvheader
+    %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+    % \AtBeginEnvironment{itemize}{\small}
+    
+    %% Set the left/right column width ratio to 6:4.
+    \columnratio{0.25}
+
+    % Start a 2-column paracol. Both the left and right columns will automatically
+    % break across pages if things get too long.
+    \begin{paracol}{2}
+        % ----- TECH STACK -----
+        \cvsection{Tecnologias}
+        \cvsubsection{Backend}
+          \bigskip
+            \begin{sloppypar*}
+                \cvtags{Java/true, Spring Framework, JUnit/true, Mockito, Maven/true, Kotlin , Gradle/true, Kafka, RabbitMQ/true, REST}
+            \end{sloppypar*}
+        \cvsubsection{Dados}
+          \bigskip
+            \begin{sloppypar*}
+                \cvtags{Python/true, VBA, SQL/true}
+            \end{sloppypar*}
+        \cvsubsection{Frontend}
+          \bigskip
+            \begin{sloppypar*}
+                \cvtags{Angular/true, CSS, TypeScript/true, HTML, JavaScript/true}
+            \end{sloppypar*}
+        \cvsubsection{Bancos de Dados}
+          \bigskip
+            \begin{sloppypar*}
+                \cvtags{SQL Server/true, MySQL, Access/true, MongoDB, Redis/true}
+            \end{sloppypar*}
+        \cvsubsection{DevOps}
+          \bigskip
+            \begin{sloppypar*}
+                \cvtags{Kubernetes/true, OpenShift, Docker/true, VMWare, Jenkins/true, GitHub Actions}
+            \end{sloppypar*}
+        \cvsubsection{Metodologias}
+          \bigskip
+            \begin{sloppypar*}
+                \cvtags{Git/true, Jira, Scrum/true, Agile, CI/CD/true}
+            \end{sloppypar*}
+        % ----- TECH STACK -----
+        
+        % ----- LANGUAGES -----
+        \cvsection{Idiomas}
+            \cvlang{Português - BR}{Nativo}
+            \cvlang{Inglês - EUA}{Intermediário}
+            \bigskip
+        % ----- LANGUAGES -----    
+
+        % use ONLY \newpage if you want to force a page break for
+        % ONLY the current column
+        \newpage
+        
+        %% Switch to the right column. This will now automatically move to the second
+        %% page if the content is too long.
+        \switchcolumn
+        
+        % ----- ABOUT ME -----
+        \cvsection{Sobre mim}
+            \begin{quote}
+                 Sou Desenvolvedor Backend com certificação Microsoft Azure e experiência sólida em Java, Spring Framework, APIs REST, Microservices, Kotlin, Angular e Python. Minha trajetória profissional inclui atuação em grandes instituições financeiras e de tecnologia, como PagBank, F1RST Tecnologia e Santander, sempre focado em soluções escaláveis, integração de sistemas e transformação digital.
+            \end{quote}
+        % ----- ABOUT ME -----
+        
+        % ----- EXPERIENCE -----
+        \cvsection{Experiências}
+            \cvevent{Engenheiro de Software}{PagBank}{mar 2025 -- presente}{São Paulo, Brasil}
+            \begin{quote}
+                Atuação no time de Emissão, desenvolvendo aplicações backend em Kotlin e Java Spring Boot, estruturadas em microsserviços e monorepos, responsáveis pela validação do fluxo de emissão de transações de cartões.
+            \end{quote}
+            \divider
+            \cvevent{Pesquisador Assistente}{UFRJ}{fev 2025 -- presente}{Rio de Janeiro, Brasil}
+            \begin{quote}
+                Atuação em projetos de pesquisa vinculados ao grupo Infornet.
+                Contribuição em atividades de análise de dados, suporte acadêmico e desenvolvimento de soluções digitais voltadas para ensino e pesquisa.
+            \end{quote}
+            \divider
+            \cvevent{IT Developer}{F1RST Tecnologia}{dez 2021 -- mar 2025}{São Paulo, Brasil}
+            \begin{quote}
+                Atuação no time de URA, com experiência na migração de projetos monolíticos para microservices, garantindo escalabilidade, flexibilidade e manutenção simplificada.
+            \end{quote}
+        % ----- EXPERIENCE -----
+        
+        % ----- EDUCATION -----
+        \cvsection{Educação}
+            \cvevent{Bacharelado em Sistemas de Informação}{USP}{2017 -- 2024}{São Paulo, Brasil}
+            \divider
+            
+            \cvevent{Certified: Azure Fundamentals}{MicrosoftMicrosoft}{out 2024}{São Paulo, Brasil}
+        % ----- EDUCATION -----
+        
+        % ----- PROJECTS -----
+        %\cvsection{Projetos}
+            %\cvevent{Meu Site}{\cvreference{\faGithub}{https://github.com/heitorel/repo}\cvreference{| \faGlobe}{https://project-demo.com/}}{set 2025 -- Mm YYYY}{}
+            %\begin{itemize}
+                %\item Item 1
+                %\item Item 2
+            %\end{itemize}
+            %\divider
+        % ----- PROJECTS -----
+    \end{paracol}
+\end{document}
